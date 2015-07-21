@@ -16,6 +16,8 @@
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
+
+
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (setq js2-highlight-level 3)
@@ -110,6 +112,8 @@
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+(require 'nodejs-repl)
+(require 'nodejs-repl-eval)
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
